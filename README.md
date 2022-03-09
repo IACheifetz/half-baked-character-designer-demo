@@ -45,4 +45,4 @@ catchphrase: 1 input and 1 button
 	why: button:  we need to know when to add the catchphrase
 destination div for catchphrase list
 destination div to show user how many times each aspect of character changed
-	why: to show how many times aspect of character has changed
+	why: to show how many times each aspect of character has changed
