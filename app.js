@@ -13,9 +13,6 @@ const charNameInput = document.getElementById('charName-input');
 const charNameButton = document.getElementById('charName-button');
 const charNameEl = document.getElementById('charName');
 
-
-
-
 // set state for how many times the user changes the head, middle, and bottom
 // set state for all of the character's catchphrases
 
@@ -24,38 +21,6 @@ let middleCount = 0;
 let bottomCount = 0;
 const catchphrases = [];
 const charNames = [];
-
-charNameButton.addEventListener('click', () => {
-    // get the value of the catchphrase input
-    const newCharName = charNameInput.value;
-    // push the new catchphrase to the catchphrase array in state
-    charNames.push(newCharName);
-    // clear out the form input's value so it's empty to the user
-    charNameInput.value = '';
-    // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
-    displayCharNames();
-
-});
-
-function displayCharNames() {
-    charNameEl.textContent = '';
-    for (let characterName of charNames) {
-        const h2 = document.createElement('h2');
-
-        h2.classList.add('char-name');
-        h2.textContent = characterName;
-
-        charNameEl.append(h2);
-
-    }
-
-    // if (charNames.length >= 0) {
-    //     charNames.pop();
-    // }
-    charNames.pop();
-    
-}
-
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
@@ -126,4 +91,31 @@ function displayCatchphrases() {
     // create an HTML element with the catchphrase as its text content
  
     // and append that HTML element to the cleared-out DOM
+}
+
+charNameButton.addEventListener('click', () => {
+    const newCharName = charNameInput.value;
+    charNames.push(newCharName);
+    charNameInput.value = '';
+    displayCharNames();
+
+});
+
+function displayCharNames() {
+    charNameEl.textContent = '';
+    for (let characterName of charNames) {
+        const h2 = document.createElement('h2');
+
+        h2.classList.add('char-name');
+        h2.textContent = characterName;
+
+        charNameEl.append(h2);
+
+    }
+
+    // if (charNames.length >= 0) {
+    //     charNames.pop();
+    // }
+    charNames.pop();
+    
 }
