@@ -136,6 +136,12 @@ main {
 
 .catchphrase {
     font-size: 2rem;
-    font-family: cursive;
+    font-family: helvetica;
     text-align: center;
+}
+
+.charName {
+    font-weight: bold;
+    position: absolute;
+    bottom: 800px;
 }

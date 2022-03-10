@@ -31,3 +31,18 @@ User [this repository](https://github.com/alchemycodelab/half-baked-web-01-chara
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --: |
 | IMPURE: `displayStats() : mutates the DOM to display a string describing the counts.` |   1 |
 | IMPURE: `displayCatchphrases() : clears out the old list from the DOM, loops through catchphrases, renders and appends to the list element`                                                                                                                                                          |   2 |
+
+
+![wireframe for character creator demo](/assets/wireframe.png "wireframe for character creator demo")
+
+HTML setup
+3 image tags
+	why: display images connected to dropdown values
+3 dropdowns
+	why: need to know which img user chooses for each option
+catchphrase: 1 input and 1 button
+	why: input: to show what catchphrase the user typed
+	why: button:  we need to know when to add the catchphrase
+destination div for catchphrase list
+destination div to show user how many times each aspect of character changed
+	why: to show how many times each aspect of character has changed
